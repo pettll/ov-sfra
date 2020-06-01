@@ -32,10 +32,6 @@
                             <div class="row ">
 
                                 <div class="input-group mb-3 col-12">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text text-white font-weight-bold border border-primary" type="text"
-                                            style="background-color:#20694E">🚘</span>
-                                    </div>
                                     <input type="text" class="form-control search-field border border-primary" name="q" value=""
                                         placeholder="Busque por modelo" role="combobox" aria-describedby="search-assistive-text"
                                         aria-haspopup="listbox" aria-owns="search-results" aria-expanded="false"
