@@ -55,10 +55,10 @@
                                     </div>
                                     <select class="custom-select border border-primary form-control search-field" type="text" role="combobox" name="q" value="" id="inputGroupSelect02" >
                                         <option selected value="">Selecione</option>
-                                        <option value=" Ford">Ford</option>
-                                        <option value=" Audi">Audi</option>
-                                        <option value=" Citroen">Citroën</option>
-                                        <option value=" Mercedes">Mercedes</option>
+                                        <option value=" Ford ">Ford</option>
+                                        <option value=" Audi ">Audi</option>
+                                        <option value=" Citroen ">Citroën</option>
+                                        <option value=" Mercedes ">Mercedes</option>
                                     </select>
                                 </div>
 

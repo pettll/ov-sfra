@@ -3,7 +3,7 @@
         ${Resource.msgf('label.results', 'search', null, pdict.productSearch.count)}
     </span>
 <iselse>
-    <p>
+    <p class="d-none">
         <span class="search-result-count">
             <isif condition="${pdict.productSearch.productIds.length > 0}">
                 ${Resource.msgf('label.resultsfor', 'search', null, pdict.productSearch.count)}
