@@ -1,0 +1,122 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/productTile.js');
+        assets.addCss('/css/homePage.css');
+    </isscript>
+
+    <!-- +1.888.555.0199 --><!--This phone is a requirement to support existing Gomez monitor of SiteGenesis. Demadware customers can remove this.-->
+    <div class="home-main homepage">
+        <isslot id="home-main-m" description="Main home page slot." context="global" />
+    </div>
+
+    <div class="container home-categories homepage">
+        <div class="row home-main-categories no-gutters">
+            <isslot id="home-categories-m" description="Categories slots on the home page." context="global" />
+        </div>
+    </div>
+
+
+    <div class="container home-categories homepage">
+        <div class="row home-main-categories no-gutters">
+            <!---<isslot id="home-pesquisa-m" description="Search slots on the home page." context="global" /> --->
+
+
+            <div class="container px-1">
+                <div class="card" style="border-color:#20694E; border-width: 2px;">
+                    <div class="card-body">
+
+                        <h3 class="card-title" style="color:#20694E">Encontre seu próximo carro</h3>
+                        <form role="search" action="${URLUtils.url('Search-Show')}" method="get" name="simpleSearch">
+
+                            <div class="row ">
+
+                                <div class="input-group mb-3 col-12">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text text-white font-weight-bold border border-primary" type="text"
+                                            style="background-color:#20694E">🚘</span>
+                                    </div>
+                                    <input type="text" class="form-control search-field border border-primary" name="q" value=""
+                                        placeholder="Busque por modelo" role="combobox" aria-describedby="search-assistive-text"
+                                        aria-haspopup="listbox" aria-owns="search-results" aria-expanded="false"
+                                        aria-autocomplete="list" aria-activedescendant="" aria-controls="search-results"
+                                        aria-label="${Resource.msg('simplesearch.searchtext', 'common', null)}"
+                                        autocomplete="off" />
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="input-group mb-3 col-12 col-md-5">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text text-white font-weight-bold border border-primary" type="text"
+                                            style="background-color:#20694E">Marca</span>
+                                    </div>
+                                    <select class="custom-select border border-primary form-control search-field" type="text" role="combobox" name="q" value="" id="inputGroupSelect02" >
+                                        <option selected value="">Selecione</option>
+                                        <option value=" Ford">Ford</option>
+                                        <option value=" Audi">Audi</option>
+                                        <option value=" Citroen">Citroën</option>
+                                        <option value=" Mercedes">Mercedes</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group mb-3 col-12 col-md-5">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text text-white font-weight-bold border border-primary" type="text"
+                                            style="background-color:#20694E">Ano</span>
+                                    </div>
+                                    <select class="custom-select border border-primary form-control search-field" type="text" role="combobox" name="q" value="" id="inputGroupSelect03">
+                                        <option selected value="">Selecione</option>
+                                        <option value=" 2019">2019</option>
+                                        <option value=" 2018">2018</option>
+                                        <option value=" 2017">2017</option>
+                                        <option value=" 2016">2016</option>
+                                        <option value=" 2015">2015</option>
+                                    </select>
+                                </div>
+
+                                <button type="submit" name="search-button"
+                                    class="btn btn-primary btn-block text-white font-weight-bold mb-3 col-12 col-md-2"
+                                    aria-label="${Resource.msg('label.header.search.go', 'common', null)}">Pesquisar</button>
+
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container home-product-tiles homepage">
+        <div class="hp-product-grid" itemtype="http://schema.org/SomeProducts" itemid="#product">
+            <isslot id="home-products-m" description="Product tiles on the home page." context="global" />        
+        </div>
+    </div>
+
+    <div class="homepage shop-the-style">
+        <isslot id="home-product-set-m" description="Link to a Product Set." context="global" />
+    </div>
+    <div class="home-email-signup">
+        <div class="container">
+            <form role="form">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="hpEmailSignUp" placeholder="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}" aria-label="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}">
+                            <span class="input-group-append">
+                                <button type="submit" class="btn btn-primary subscribe-email" data-href="${URLUtils.url('EmailSubscribe-Subscribe')}">${Resource.msg('button.form.emailsignup', 'homePage', null)} </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-7 email-description">${Resource.msg('description.form.emailsignup', 'homePage', null)}</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</isdecorate>
